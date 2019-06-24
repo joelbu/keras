@@ -273,7 +273,7 @@ class Sequential(Model):
 
     def get_config(self):
         layer_configs = []
-        for layer in self.layers:
+        for layer in self._layers:
             layer_configs.append({
                 'class_name': layer.__class__.__name__,
                 'config': layer.get_config()
